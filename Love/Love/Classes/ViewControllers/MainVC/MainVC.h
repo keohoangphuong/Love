@@ -10,4 +10,6 @@
 
 @interface MainVC : BaseVC
 
+@property (nonatomic, weak) IBOutlet UIButton *btnPopOver;
+
 @end

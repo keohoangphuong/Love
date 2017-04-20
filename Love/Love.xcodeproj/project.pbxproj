@@ -16,6 +16,8 @@
 		C6ED84BB1E6BC609009030B7 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED84B61E6BC609009030B7 /* MainVC.m */; };
 		C6ED84BF1E6BC683009030B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6ED84BE1E6BC683009030B7 /* Main.storyboard */; };
 		C6ED84C31E6BC778009030B7 /* BaseNV.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ED84C21E6BC778009030B7 /* BaseNV.m */; };
+		C6F55FF91EA8BE3500A21C71 /* PopoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F55FF81EA8BE3500A21C71 /* PopoverVC.m */; };
+		C6F55FFE1EA8C04500A21C71 /* PopoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6F55FFD1EA8C04500A21C71 /* PopoverCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,11 @@
 		C6ED84BE1E6BC683009030B7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C6ED84C11E6BC778009030B7 /* BaseNV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseNV.h; path = BaseNV/BaseNV.h; sourceTree = "<group>"; };
 		C6ED84C21E6BC778009030B7 /* BaseNV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseNV.m; path = BaseNV/BaseNV.m; sourceTree = "<group>"; };
+		C6F55FF71EA8BE3500A21C71 /* PopoverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopoverVC.h; path = Popover/PopoverVC.h; sourceTree = "<group>"; };
+		C6F55FF81EA8BE3500A21C71 /* PopoverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopoverVC.m; path = Popover/PopoverVC.m; sourceTree = "<group>"; };
+		C6F55FFA1EA8BF4300A21C71 /* define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define.h; sourceTree = "<group>"; };
+		C6F55FFC1EA8C04500A21C71 /* PopoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopoverCell.h; path = Popover/PopoverCell/PopoverCell.h; sourceTree = "<group>"; };
+		C6F55FFD1EA8C04500A21C71 /* PopoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PopoverCell.m; path = Popover/PopoverCell/PopoverCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +75,7 @@
 		C6ED843C1E6BC1A9009030B7 /* Love */ = {
 			isa = PBXGroup;
 			children = (
+				C6F55FFA1EA8BF4300A21C71 /* define.h */,
 				C6ED84A51E6BC609009030B7 /* Classes */,
 				C6ED84BC1E6BC623009030B7 /* Resources */,
 				C6ED843D1E6BC1A9009030B7 /* Supporting Files */,
@@ -88,6 +96,7 @@
 		C6ED84A51E6BC609009030B7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C6F55FF61EA8BDF400A21C71 /* Popover */,
 				C6ED84A61E6BC609009030B7 /* AppDelegate */,
 				C6ED84A91E6BC609009030B7 /* Base */,
 				C6ED84B31E6BC609009030B7 /* ViewControllers */,
@@ -184,6 +193,25 @@
 			name = BaseNV;
 			sourceTree = "<group>";
 		};
+		C6F55FF61EA8BDF400A21C71 /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				C6F55FFB1EA8BFD500A21C71 /* PopoverCell */,
+				C6F55FF71EA8BE3500A21C71 /* PopoverVC.h */,
+				C6F55FF81EA8BE3500A21C71 /* PopoverVC.m */,
+			);
+			name = Popover;
+			sourceTree = "<group>";
+		};
+		C6F55FFB1EA8BFD500A21C71 /* PopoverCell */ = {
+			isa = PBXGroup;
+			children = (
+				C6F55FFC1EA8C04500A21C71 /* PopoverCell.h */,
+				C6F55FFD1EA8C04500A21C71 /* PopoverCell.m */,
+			);
+			name = PopoverCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -259,8 +287,10 @@
 				C6ED84C31E6BC778009030B7 /* BaseNV.m in Sources */,
 				C6ED84BB1E6BC609009030B7 /* MainVC.m in Sources */,
 				C6ED84B91E6BC609009030B7 /* BaseTbv.m in Sources */,
+				C6F55FFE1EA8C04500A21C71 /* PopoverCell.m in Sources */,
 				C6ED84BA1E6BC609009030B7 /* BaseVC.m in Sources */,
 				C6ED844B1E6BC1A9009030B7 /* Love.xcdatamodeld in Sources */,
+				C6F55FF91EA8BE3500A21C71 /* PopoverVC.m in Sources */,
 				C6ED84B71E6BC609009030B7 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +431,7 @@
 				C6ED84561E6BC1A9009030B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -7,8 +7,10 @@
 //
 
 #import "MainVC.h"
+#import "PopoverVC.h"
+#import "define.h"
 
-@interface MainVC ()
+@interface MainVC () <UIPopoverPresentationControllerDelegate>
 
 @end
 
@@ -24,14 +26,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+- (IBAction)onBtnPopOver:(id)sender {
+    PopoverVC *vc = VCFromSB(PopoverVC, @"Main");
+    vc.modalPresentationStyle = UIModalPresentationPopover;
+    // configure the Popover presentation controller
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    vc.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp;
+    vc.popoverPresentationController.delegate = self;
+    vc.popoverPresentationController.sourceView = _btnPopOver;
+    vc.popoverPresentationController.sourceRect = _btnPopOver.bounds;
+    
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
 }
-*/
 
 @end
